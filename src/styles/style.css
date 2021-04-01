@@ -1,0 +1,417 @@
+:root {
+  --color-primary: #fcf9f9;
+  --color-secendary: rgb(199, 199, 199);
+  --color-list: #f5ebeb;
+  --color-text: #3d3d3d;
+  --color-button: #b92121;
+  --text-font: "Verdana";
+  --text-font2: "Arial";
+}
+body {
+  background: var(--color-primary);
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+  transform: 0.5s;
+}
+.Inspctn {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.Main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: fadeIn 3.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeIn 3.5s; /* Firefox < 16 */
+  -ms-animation: fadeIn 3.5s; /* Internet Explorer */
+  -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
+  animation: fadeIn 3.5s;
+}
+.header {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navButtons {
+  flex: 0.6;
+}
+.App {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  -webkit-animation: fadeInOut 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInOut 2s; /* Firefox < 16 */
+  -ms-animation: fadeInOut 2s; /* Internet Explorer */
+  -o-animation: fadeInOut 2s; /* Opera < 12.1 */
+  animation: fadeInOut 2s;
+}
+.Logo {
+  display: grid;
+  place-items: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+li {
+  padding: 10px 20px;
+  transition: 0.5s;
+  width: 50%;
+  margin: 5px;
+  color: var(--color-list);
+  font-weight: bold;
+  font: var(--text-font);
+  list-style: none;
+  border-radius: 15px;
+}
+ul {
+  list-style: none;
+  font: var(--text-font);
+  display: block;
+  margin: 0 auto;
+  padding: 0%;
+
+  /* text-decoration: none; */
+}
+ul li:nth-child(1) {
+  background: var(--color-button);
+  font: var(--text-font2);
+  text-decoration: none;
+}
+
+ul li:nth-child(2) {
+  background: var(--color-secendary);
+  font: var(--text-font2);
+  color: var(--color-text);
+}
+
+ul li:nth-child(3) {
+  background: var(--color-secendary);
+  font: var(--text-font2);
+  color: var(--color-text);
+}
+
+ul li:nth-child(4) {
+  background: var(--color-secendary);
+  font: var(--text-font2);
+  color: var(--color-text);
+}
+
+.newInspectLink {
+  text-decoration: none;
+  color: #013243;
+  font-weight: bold;
+  font: var(--text-font2);
+  -webkit-animation: fadeIn 3.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeIn 3.5s; /* Firefox < 16 */
+  -ms-animation: fadeIn 3.5s; /* Internet Explorer */
+  -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
+  animation: fadeIn 3.5s;
+}
+.headerBlock {
+  background-color: var(--color-secendary);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  font: var(--text-font2);
+}
+
+.headerText {
+  width: 100%;
+  text-align: center;
+  font: var(--text-font2);
+}
+.imgDiv {
+  height: 24px;
+  width: 24px;
+  padding: 10px;
+}
+
+.entryImg {
+  height: 200px;
+  width: 200px;
+}
+
+#innerText {
+  font-weight: bold;
+  font: var(--text-font2);
+}
+label {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+  font: var(--text-font2);
+}
+input {
+  width: 200px;
+  border-radius: 15px;
+}
+.formDiv {
+  color: var(--color-text);
+  margin-top: 40px;
+  border-radius: 15px;
+}
+.linkstyle {
+  color: #fff;
+}
+
+#vinBtn {
+  margin-top: 10px;
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5%;
+  background: var(--color-secendary);
+  color: var(--color-text);
+  border-radius: 15px;
+  font: var(--text-font2);
+}
+#continueBtn {
+  margin-top: 30px;
+  width: 200px;
+  background: var(--color-button);
+  border: none;
+  border-radius: 5%;
+  padding: 5px;
+  color: var(--color-list);
+  border-radius: 15px;
+  font: var(--text-font2);
+}
+#selectTrans {
+  width: 200px;
+  border-radius: 15px;
+}
+
+/******animations*******/
+
+/* FADE-IN ANIMATION */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* FADE-IN FADE-OUT ANIMATION */
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  li {
+    width: 80%;
+    font-size: 30px;
+  }
+  ul {
+    align-items: center;
+    margin-top: 50%;
+  }
+  label {
+    width: 45%;
+    font-size: 30px;
+  }
+  input {
+    width: 45%;
+    font-size: 30px;
+  }
+  #selectTrans {
+    width: 45%;
+    font-size: 30px;
+  }
+  #vinBtn,
+  #continueBtn {
+    padding: 10px;
+    font-size: 30px;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Logo {
+    display: grid;
+    place-items: center;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  li {
+    width: 80%;
+    font-size: 30px;
+  }
+  ul {
+    align-items: center;
+    margin-top: 50%;
+  }
+  label {
+    width: 45%;
+    font-size: 10px;
+  }
+  input {
+    width: 45%;
+    font-size: 10px;
+  }
+  #selectTrans {
+    width: 45%;
+    font-size: 10px;
+  }
+  #vinBtn,
+  #continueBtn {
+    padding: 5px;
+    font-size: 10px;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .Logo {
+    display: grid;
+    place-items: center;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  li {
+    width: 80%;
+    font-size: 30px;
+  }
+  ul {
+    align-items: center;
+    margin-top: 50%;
+  }
+  label {
+    width: 45%;
+    font-size: 10px;
+  }
+  input {
+    width: 45%;
+    font-size: 10px;
+  }
+  #selectTrans {
+    width: 45%;
+    font-size: 10px;
+  }
+  #vinBtn,
+  #continueBtn {
+    padding: 5px;
+  }
+  #vinBtn,
+  #continueBtn {
+    padding: 5px;
+    font-size: 10px;
+    width: 45%;
+  }
+}
