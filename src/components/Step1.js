@@ -168,9 +168,10 @@ class Step1 extends React.Component {
 							<label className="labels">Model : </label>
 							<input type="text" value={this.state.model} onChange={this.handleModelChange} />
 						</div>
-						<button type="button" id="continueBtn"  onClick={this.changeFlag}>
+						{/*<button type="button" id="continueBtn"  onClick={this.changeFlag}>
 							CONTINUE
-						</button>
+			</button>*/}
+			          <Step2/>
 					</form>
 				</div>
 			);
