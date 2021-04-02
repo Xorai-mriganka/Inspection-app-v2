@@ -5,6 +5,7 @@ import MainForm from "./Step1";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Inspctn from '../components/Inspctn';
+import NoteMain from "./NoteMain";
 
 const Dashboard = () => {
   return (
@@ -36,7 +37,8 @@ function MainScreen() {
         <Switch>
           <Route path="/" exact component={Dashboard} />
           <Route path="/new_Form" exact component={MainForm} />
-          <Route path="/note" exact component={Inspctn} />
+          <Route path="/Inspection_points" exact component={Inspctn} />
+          <Route path="/note" exact component={NoteMain} />
         </Switch>
       </>
     </Router>

@@ -237,7 +237,7 @@ export default class Step2 extends React.Component {
                     this.setState({ Vehicle: finalData });
                     this.getAlert;
                   }}>
-                  <Link className="linkstyle" to="/note">Enter Inspection Data</Link>
+                  <Link className="linkstyle" to="/Inspection_points">Enter Inspection Data</Link>
                 </button>
             </form>
           </div>
