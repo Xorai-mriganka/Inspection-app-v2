@@ -40,8 +40,13 @@ function Row(props) {
           </th>
           <th>
             <div class="dropleft dropdown">
-              <button class="dropbtn">
-                <Link className="linkstyle" to="/note"> {purpose} </Link>
+              <button class="dropbtn" >
+                <Link className="linkstyle" to= {{
+                  pathname: "/note",
+                  nameProps:{
+                    name: {name}
+                  }
+                }}> {purpose} </Link>
               </button>
             </div>
           </th>

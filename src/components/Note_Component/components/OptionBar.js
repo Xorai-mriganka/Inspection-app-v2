@@ -36,11 +36,11 @@ function OptionBar() {
             <input style={{ display: "none" }} ref={inputFile} capture="environment" onChange={handleFileUpload} type="file"/>
 
             <Camera>
-                <CameraAltIcon fontSize='medium' onClick={onCameraIconClick}/>
+                <CameraAltIcon fontSize='default' onClick={onCameraIconClick}/>
             </Camera>
 
             <DisplayImage>             
-                <ImageIcon fontSize='medium' onClick={onGalleryIconClick}/>
+                <ImageIcon fontSize='default' onClick={onGalleryIconClick}/>
                 {PopupisOpen && <Popup 
                 content = {<>
                             <img src={image} alt="" width='100%' height = '100%'/>

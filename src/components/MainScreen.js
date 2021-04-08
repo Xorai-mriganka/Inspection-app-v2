@@ -10,7 +10,7 @@ import NoteMain from "./NoteMain";
 const Dashboard = () => {
   return (
     <div className="Main-container">
-      <div align="center" className="header">
+      <div align="center" className="header1">
         <img className="entryImg" src="/Images/xorai_logo.png" />
       </div>
 
@@ -21,9 +21,7 @@ const Dashboard = () => {
           </Link>
           <li className="Links">Previous Inspection</li>
           <li className="Links">Training Resources</li>
-          <li className="Links">
-            Contact Us
-          </li>
+          <li className="Links">Contact Us</li>
         </ul>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default class Step2 extends React.Component {
 
   getAlert = () => {
     // Enter POST function here!!
-    alert("this is the data" + this.state.Vehicle);
+    console.log("this is the data" + this.state.Vehicle);
     var vehicle = { ...this.props.data1, ...this.state.Vehicle2 };
     this.setState({
       Vehicle: vehicle,

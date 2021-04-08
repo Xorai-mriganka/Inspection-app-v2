@@ -9,7 +9,7 @@ import Comment from '../components/Note_Component/components/Comment';
 export const ListContext = React.createContext();
 export const BoolContext = React.createContext();
 
-function NoteMain() {
+function NoteMain(props){
 
   const [comment , setComment] = useState('');
   const [bool , setBool] = useState('');
@@ -20,7 +20,7 @@ function NoteMain() {
     setComment(data);
     setBool(bool);
   };
-
+  console.log('name',props.location.nameProps.name.name);
   return (
     <div>
       <ListContext.Provider value={comment}>
@@ -29,7 +29,7 @@ function NoteMain() {
               <Header/>
               <OptionBar/>
               <Main>
-                <Note/>
+                <Note name={props.location.nameProps.name.name}/>
                 <Comment  sendDataToParent={sendDataToParent} />
               </Main>    
           </Container>

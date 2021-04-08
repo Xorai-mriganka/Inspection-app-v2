@@ -1,39 +1,36 @@
+import { Input } from '@material-ui/icons';
 import React ,{useContext, useState} from 'react';
 import styled from 'styled-components';
 import {ListContext,BoolContext} from '../../NoteMain';
 
-function Note() {
+function Note(props) {
 
     const list = useContext(ListContext);
     const bool = useContext(BoolContext);
 
     const[content,setContent] = useState('');
 
-    function handleClick(e) {
-        // e.preventDefault();
-        // console.log('Button is clicked',list);
-        // bool = 'false';
-    }
+
     let comp;
     if(bool)
     {
-        comp = <textarea placeholder='write...' value={list} onChange={e=>setContent(e.target.value)}/>
+        comp = <textarea id='input' placeholder='write...' value={list} onChange={e=>setContent(e.target.value)} readOnly='readonly'/>
     }
     else{
-        comp = <textarea placeholder='write...' value={content} onChange={e=>setContent(e.target.value)}/>
+        comp = <textarea id='input' placeholder='write...' value={content} onChange={e=>setContent(e.target.value)} readOnly='readonly'/>
     }
 
     return (
         <Container>
             <Title>
-                <span>Condition</span>
+                <span>{props.name}</span>
             </Title>
             <NoteContainer>
                 {/* <textarea placeholder='write...' value={content} onChange={e=>setContent(e.target.value)}/> */}
                 {comp}
             </NoteContainer>   
             <ButtonContainer>
-                <button onClick={handleClick}>Edit</button>
+                <button onClick ={() => document.getElementById('input').readOnly=false }>Edit</button>
             </ButtonContainer>
         </Container>
         
