@@ -16,12 +16,18 @@ class Step1 extends React.Component {
 			year: '',
 			make: '',
 			model: '',
+			shopId: '',
+			vehicleId: '',
+			technicianId: '',
+			customerId: '',
+			vehicleMileage: ''
 		};
 	}
 
 	getAlert = () => {
 		alert('Done');
 	};
+
 	/*Change flag in state in order to load forms*/
 	changeFlag = () => {
 		const { flag } = this.state;
@@ -29,7 +35,24 @@ class Step1 extends React.Component {
 			flag: 1,
 			Vehicle : {...this.props.data1,...this.state.Vehicle2}
 		});
+		console.log(this.state);
+
+		let url="http://44.192.60.84:8080/api/inspections";
+		let data=this.state.Vehicle1;
+		fetch(url,{
+			method: 'POST',
+			headers: {
+				"Content-Type": "application/json",
+				"Accept": "application/json"
+			},
+			body:JSON.stringify(data)
+		}).then((result)=>{
+			result.json().then((resp)=>{
+				console.warn('resp',resp)
+			})
+		})
 	};
+
 	/*Handling date*/
 	handleDateChange = (event) => {
 		this.setState({
@@ -68,6 +91,7 @@ class Step1 extends React.Component {
 			model: event.target.value,
 		});
 	};
+
 	goBack = () => {
 		window.history.back();
 	};
@@ -77,15 +101,28 @@ class Step1 extends React.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 
-		const { inspectionDate, name, vin, year, make, model } = this.state;
+		// const { inspectionDate, name, vin, year, make, model ,shopId ,vehicleId ,technicanId ,customerId ,vehicleMileage} = this.state;
+		const {shopId ,vehicleId ,technicianId ,customerId ,vehicleMileage} = this.state;
 
+		// const vehicle1 = {
+		// 	inspectionDate,
+		// 	name,
+		// 	vin,
+		// 	year,
+		// 	make,
+		// 	model,
+		// 	shopId,
+		// 	vehicleId,
+		// 	technicanId,
+		// 	customerId,
+		// 	vehicleMileage
+		// };
 		const vehicle1 = {
-			inspectionDate,
-			name,
-			vin,
-			year,
-			make,
-			model,
+			shopId,
+			vehicleId,
+			technicianId,
+			customerId,
+			vehicleMileage
 		};
 		
 		this.setState({

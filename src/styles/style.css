@@ -25,6 +25,7 @@ body {
   padding: 0;
 }
 .Main-container {
+  margin-top: 5%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,7 +35,7 @@ body {
   -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
   animation: fadeIn 3.5s;
 }
-.header {
+.header1 {
   flex: 0.4;
   display: flex;
   align-items: center;
@@ -307,6 +308,18 @@ input {
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
+  .Main-container {
+    margin-top: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: fadeIn 3.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 3.5s; /* Firefox < 16 */
+    -ms-animation: fadeIn 3.5s; /* Internet Explorer */
+    -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
+    animation: fadeIn 3.5s;
+  }
+
   li {
     width: 80%;
     font-size: 30px;
@@ -336,6 +349,17 @@ input {
 }
 
 @media screen and (max-width: 400px) {
+  .Main-container {
+    margin-top: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: fadeIn 3.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 3.5s; /* Firefox < 16 */
+    -ms-animation: fadeIn 3.5s; /* Internet Explorer */
+    -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
+    animation: fadeIn 3.5s;
+  }
   .Logo {
     display: grid;
     place-items: center;
@@ -374,6 +398,17 @@ input {
   }
 }
 @media screen and (max-width: 700px) {
+  .Main-container {
+    margin-top: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: fadeIn 3.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 3.5s; /* Firefox < 16 */
+    -ms-animation: fadeIn 3.5s; /* Internet Explorer */
+    -o-animation: fadeIn 3.5s; /* Opera < 12.1 */
+    animation: fadeIn 3.5s;
+  }
   .Logo {
     display: grid;
     place-items: center;

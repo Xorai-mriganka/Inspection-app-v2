@@ -7,7 +7,7 @@ const Footer=()=> {
   return (
     <div className="main-footer">
       <div className="footer-text">
-        <p>Submit</p>
+        <p className="para">Submit</p>
       </div>
     </div>
   )

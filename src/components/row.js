@@ -3,6 +3,7 @@ import "../styles/row.css"
 import Green from './subcomponents/green';
 import Yellow from './subcomponents/Yellow';
 import Red from './subcomponents/Red';
+import {Link} from "react-router-dom";
 
 
 
@@ -39,7 +40,14 @@ function Row(props) {
           </th>
           <th>
             <div class="dropleft dropdown">
-              <button class="dropbtn">{purpose}</button>
+              <button class="dropbtn" >
+                <Link className="linkstyle" to= {{
+                  pathname: "/note",
+                  nameProps:{
+                    name: {name}
+                  }
+                }}> {purpose} </Link>
+              </button>
             </div>
           </th>
         </tr>
