@@ -150,7 +150,7 @@ export default class Step2 extends React.Component {
       return (
         // <Router>
           <div>
-            <div className="headerBlock">
+           {/*<div className="headerBlock">
               <div>
                 <img
                   className="imgDiv"
@@ -160,8 +160,8 @@ export default class Step2 extends React.Component {
               </div>
               <div className="headerText">
                 <p id="innerText">NEW INSPECTION CONTINUED</p>
-              </div>
-            </div>
+      </div>
+      </div>*/}
             <form
               align="center"
               onChange={this.handleChange}
