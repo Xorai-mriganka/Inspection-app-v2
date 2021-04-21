@@ -205,31 +205,10 @@ class Step1 extends React.Component {
 							<label className="labels">Model : </label>
 							<input type="text" value={this.state.model} onChange={this.handleModelChange} />
 						</div>
-
-						<div className="formDiv">
-							<label className="labels">ShopId : </label>
-							<input type="text" value={this.state.shopId} name ="shopId" onChange={(event) => {this.setState({shopId: event.target.value})}}/>
-						</div>
-						<div className="formDiv">
-							<label className="labels">VehicleId : </label>
-							<input type="text" value={this.state.vehicleId} name ="vehicleId" onChange={(event) => {this.setState({vehicleId: event.target.value})}} />
-						</div>
-						<div className="formDiv">
-							<label className="labels">TechnicanId : </label>
-							<input type="text" value={this.state.technicianId} name ="technicianId" onChange={(event) => {this.setState({technicianId: event.target.value})}} />
-						</div>
-						<div className="formDiv">
-							<label className="labels">CustomerId : </label>
-							<input type="text" value={this.state.customerId} name ="customerId" onChange={(event) => {this.setState({customerId: event.target.value})}} />
-						</div>
-						<div className="formDiv">
-							<label className="labels">VehicleMileage : </label>
-							<input type="text" value={this.state.vehicleMileage} name ="vehicleMileage" onChange={(event) => {this.setState({vehicleMileage: event.target.value})}} />
-						</div>
-
-						<button type="button" id="continueBtn"  onClick={this.changeFlag}>
+						{/*<button type="button" id="continueBtn"  onClick={this.changeFlag}>
 							CONTINUE
-						</button>
+			</button>*/}
+			          <Step2/>
 					</form>
 				</div>
 			);
