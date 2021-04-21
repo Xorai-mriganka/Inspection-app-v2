@@ -4,7 +4,7 @@ import Green from './subcomponents/green';
 import Yellow from './subcomponents/Yellow';
 import Red from './subcomponents/Red';
 import {Link} from "react-router-dom";
-
+import { Button, ButtonGroup } from 'reactstrap';
 
 
 
@@ -14,27 +14,30 @@ function Row(props) {
     return (
       <>
         <tr>
-          <th>
-            <div class="dropdown">
-              <div className="button1">
-                <Green/>
+          <ButtonGroup>
+            <th>
+              <div class="dropdown">
+                <div className="button1">
+                  <Green/>
+                </div>
               </div>
-            </div>
-          </th>
-          <th>
-            <div class="dropdown">
-              <div className="button2">
-               <Yellow/>
+            </th>
+            <th>
+              <div class="dropdown">
+                <div className="button2">
+                <Yellow/>
+                </div>
               </div>
-            </div>
-          </th>
-          <th>
-            <div class="dropdown">
-              <div className="button3">
-               <Red/>
+            </th>
+            <th>
+              <div class="dropdown">
+                <div className="button3">
+                <Red/>
+                </div>
               </div>
-            </div>
-          </th>
+            </th>
+          </ButtonGroup>
+          
           <th>
             <section className="text">{name}</section>
           </th>
