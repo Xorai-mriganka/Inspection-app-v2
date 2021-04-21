@@ -10,7 +10,7 @@ class Step1 extends React.Component {
 			
 			Vehicle1 :{},
 			flag: 0,
-			inspectionDate: '',
+			//inspectionDate: '',
 			name: '',
 			vin: '',
 			year: '',
@@ -54,11 +54,11 @@ class Step1 extends React.Component {
 	};
 
 	/*Handling date*/
-	handleDateChange = (event) => {
-		this.setState({
-			inspectionDate: event.target.value,
-		});
-	};
+	// handleDateChange = (event) => {
+	// 	this.setState({
+	// 		inspectionDate: event.target.value,
+	// 	});
+	// };
 
 	/*Handling Name*/
 	handleNameChange = (event) => {
@@ -178,28 +178,13 @@ class Step1 extends React.Component {
 						</div>
 					</div>
 					<form align="center" onChange={this.handleSubmit}>
-						<div className="formDiv">
+						{/* <div className="formDiv">
 							<label className="labels">Inspection Date: </label>
 							<input type="date" value={this.state.inspectionDate} onChange={this.handleDateChange} />
-						</div>
+						</div> */}
 						<div className="formDiv">
 							<label className="labels">Name : </label>
 							<input type="text" value={this.state.name} onChange={this.handleNameChange} />
-						</div>
-						<div className="formDiv">
-							<label className="labels">VIN : </label>
-							<input type="text" value={this.state.vin} onChange={this.handleVINChange} />
-						</div>
-						<button id="vinBtn" type="button" onClick={this.getAlert}>
-							Lookup VIN
-						</button>
-						<div className="formDiv">
-							<label className="labels">Year: </label>
-							<input type="text" value={this.state.year} onChange={this.handleYearChange} />
-						</div>
-						<div className="formDiv">
-							<label className="labels">Make : </label>
-							<input type="text" value={this.state.make} onChange={this.handleMakeChange} />
 						</div>
 						<div className="formDiv">
 							<label className="labels">Model : </label>
@@ -224,6 +209,21 @@ class Step1 extends React.Component {
 						<div className="formDiv">
 							<label className="labels">VehicleMileage : </label>
 							<input type="text" value={this.state.vehicleMileage} name ="vehicleMileage" onChange={(event) => {this.setState({vehicleMileage: event.target.value})}} />
+						</div>
+						<div className="formDiv">
+							<label className="labels">VIN : </label>
+							<input type="text" value={this.state.vin} onChange={this.handleVINChange} />
+						</div>
+						<button id="vinBtn" type="button" onClick={this.getAlert}>
+							Lookup VIN
+						</button>
+						<div className="formDiv">
+							<label className="labels">Year: </label>
+							<input type="text" value={this.state.year} onChange={this.handleYearChange} />
+						</div>
+						<div className="formDiv">
+							<label className="labels">Make : </label>
+							<input type="text" value={this.state.make} onChange={this.handleMakeChange} />
 						</div>
 						<button type="button" id="continueBtn"  onClick={this.changeFlag}>
 							CONTINUE
