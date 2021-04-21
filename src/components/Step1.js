@@ -228,7 +228,7 @@ class Step1 extends React.Component {
 						<button type="button" id="continueBtn"  onClick={this.changeFlag}>
 							CONTINUE
 						</button>
-			          <Step2/>
+			          
 					</form>
 				</div>
 			);
